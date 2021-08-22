@@ -185,7 +185,7 @@ global styles
 */
 html,
 body {
-  background: #2b1c59;
+  background: #1a543c;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -721,7 +721,8 @@ welcome
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(../images/banner-bg.png);
+  background-color: #1a543;
+  /*background-image: url(../images/banner-bg.png);*/
   background-repeat: no-repeat;
   /*
 TRY IT ... with or without CENTER CENTER
@@ -840,6 +841,7 @@ about
 */
 
 #about {
+  background-color: #232323;
   padding: 120px 0px;
   border-bottom: 1px solid #eee;
 }
@@ -897,9 +899,62 @@ about
   padding-top: 12px;
   font-size: 21px;
   font-weight: 500;
-  color: #1e1e1e;
+  color: #232323;
   margin-bottom: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+/* 
+---------------------------------------------
+COMPETITION
+--------------------------------------------- 
+*/
+#competition {
+  background-color: #d32626;
+}
+.center-text {
+  text-align: center;
+}
+
+
+
+/* 
+---------------------------------------------
+SCHEDULE
+--------------------------------------------- 
+*/
+
+#schedule {
+  background-color: #66ff00;
+}
+
+/* 
+---------------------------------------------
+MEDIA
+--------------------------------------------- 
+*/
+
+
+#media {
+  background-color: #3700ff;
+}
+
+
+
+
+
+
+
+
+
 
 /* 
 ---------------------------------------------
@@ -909,7 +964,7 @@ services
 #services {
   position: relative;
   padding: 120px 0px 90px 0px;
-  background: #2b1c59;
+  background: #1a543c;
   background: -webkit-gradient(
     left top,
     right bottom,
@@ -1302,6 +1357,32 @@ contact
 .contact-form ::placeholder {
   color: #fff;
 }
+
+
+
+
+/* 
+---------------------------------------------
+SPONSORSHIP
+--------------------------------------------- 
+*/
+
+
+#sponsor {
+  background-color: #993232;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 
 ---------------------------------------------
