@@ -12,36 +12,32 @@ const countDownMinute = document.getElementById("countDownMinute");
 const countDownSecond = document.getElementById("countDownSecond");
 
 const linkLomba = {
-  podcast: {
-    registrasi: "https://docs.google.com/forms/d/e/1FAIpQLSeQce9We5fsdl_MkjUsbKLQm4-ORSo_QiY-RllK3k81XxCgiQ/viewform?usp=pp_url",
-    konfirmasi:
-      "https://forms.gle/jLjrH5XGd6XZ5k1UA",
-  },
   web: {
-    registrasi: "https://docs.google.com/forms/d/e/1FAIpQLSd1NFC3wGIWfMcYkA_XbfmDXLkhoErZMLagjvc5W2nR6ImLJg/viewform?usp=pp_url",
+    registrasi: "#",
     konfirmasi:
-      "https://forms.gle/N7oDciue3XQhtTYm7",
-  },
-  fotografi: {
-    registrasi: "https://docs.google.com/forms/d/e/1FAIpQLSc4VoD8_ZaMDVHmWYIlFJE81jOY3WRQF7fM0FC0eiK-X5spFg/viewform?usp=pp_url",
-    konfirmasi:
-      "https://forms.gle/q9a3T9X8vt6wBiNe6",
-  },
-  essai: {
-    registrasi: "https://docs.google.com/forms/d/e/1FAIpQLSdFqubvsqjy3FZQA92MCSVDcUjYx1JZAqsdtMqGz_2nxq2ADw/viewform?usp=pp_url",
-    konfirmasi:
-      "https://forms.gle/P9m6eAKaqnoWrc2x7",
+      "#",
   },
   poster: {
-    registrasi: "https://docs.google.com/forms/d/e/1FAIpQLSeuCitGbPLSrnkToBwleTFaqOl8Yb6oPyi_ww6-XqA6ydPAdw/viewform?usp=pp_url",
+    registrasi: "#",
     konfirmasi:
-      "https://forms.gle/bczaJyuLr7D7ztyP8",
+      "#",
   },
+  ml: {
+    registrasi: "#",
+    konfirmasi:
+      "#",
+  },
+  futsal: {
+    registrasi: "#",
+    konfirmasi:
+      "#",
+  },
+  
 };
 
 const linkSubmission = {
-  batch1: "https://docs.google.com/forms/d/e/1FAIpQLSdxliYAT5VvefJQbrU7vr_M0c70GmKUDmzSZg3qaFA58hcxkA/viewform?usp=pp_url",
-  batch2: "https://docs.google.com/forms/d/e/1FAIpQLSfEzRPP0TiHFAWXiWPINB-YDJbGCaaWDYI_o1BHxfWE2njGNg/viewform?usp=pp_url",
+  batch1: "#",
+  batch2: "#",
 };
 
 window.onscroll = function () {
@@ -125,7 +121,7 @@ hamburgerMenu.addEventListener("click", function () {
   }, 100);
 });
 
-const countDownDate = new Date("Nov 12, 2022 00:00:00").getTime();
+const countDownDate = new Date("Sep 22, 2023 00:00:00").getTime();
 const x = setInterval(function () {
   const now = new Date().getTime();
   const distance = countDownDate - now;
