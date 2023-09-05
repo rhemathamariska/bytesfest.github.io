@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <style>
+      :root {
+        --swiper-pagination-bullet-inactive-color: #d9d9d9;
+        --swiper-pagination-bullet-inactive-opacity: 0.9;
+        --swiper-pagination-color: #6f32b9;
+        --swiper-navigation-size: 1.2rem;
+      }
+      #btn-back-to-top {
+        position: fixed;
+        display: none !important;
+      }
+      .shadow-header {
+        text-shadow: 8px 8px 0 #2a2745, -8px 8px 0 #2a2745, 8px -8px 0 #2a2745,
+          -8px -8px 0 #2a2745, 0px 8px 0 #2a2745, 0px -8px 0 #2a2745,
+          -8px 0px 0 #2a2745, 8px 0px 0 #2a2745, 10px 10px 0 #2a2745,
+          -10px 10px 0 #2a2745, 10px -10px 0 #2a2745, -10px -10px 0 #2a2745,
+          0px 10px 0 #2a2745, 0px -10px 0 #2a2745, -10px 0px 0 #2a2745,
+          10px 0px 0 #2a2745, 8px 10px 0 #2a2745, -8px 10px 0 #2a2745,
+          8px -10px 0 #2a2745, -8px -10px 0 #2a2745, 10px 8px 0 #2a2745,
+          -10px 8px 0 #2a2745, 10px -8px 0 #2a2745, -10px -8px 0 #2a2745;
+      }
+    </style>
+    <title>
+      Bytesfest 2022 - Bunch of Youth Technottraction and Sport Festival
+    </title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/logo-mini.png" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- script load for animejs -->
+    <script src="../dist/anime.min.js"></script>
+  </head>
+  <body
+    class="relative z-40 overflow-x-hidden bg-neutral-900 font-poppins text-white transition-all"
+  >
+    <!-- LOAD ANIMATION START -->
+    <div class="start-animation-bg fixed z-[100] h-full w-full bg-neutral-900">
+      <!-- loading-state -->
+      <div
+        class="loading-container flex h-full w-full items-center justify-center opacity-100"
+      >
+        <div class="flex w-8/12 flex-col lg:max-w-3xl">
+          <div class="loading-line mb-4 h-[2px] bg-primary-50 md:mb-6"></div>
+          <p class="text-center tracking-wide">
+            Loading <span class="loading-value">0</span>%
+          </p>
+        </div>
+      </div>
+      <!-- proudly-present-state -->
+      <div
+        class="proudly-present-container flex h-full w-full items-center opacity-0"
+      >
+        <div class="w-full text-center">
+          <h1
+            class="proudly-present-title mb-2 text-3xl opacity-0 transition-all duration-700 ease-in sm:mb-3 sm:text-4xl"
+          >
+            HMP MIKROPTIK
+          </h1>
+          <p
+            class="proudly-present-subtitle text-sm tracking-wider text-neutral-50 opacity-0 transition-all duration-700 ease-in sm:text-base"
+          >
+            Proudly Presents
+          </p>
+        </div>
+      </div>
+      <!-- bytesfest-title-state -->
+      <div
+        class="bytesfest-start-container flex h-full w-full items-center justify-center opacity-0 transition-all duration-300"
+      >
+        <div
+          class="flex w-full flex-col items-center justify-center px-5 text-center md:flex-row md:gap-x-1 md:text-left lg:gap-x-4"
+        >
+          <img
+            src="/assets/img/logo-main.png"
+            alt=""
+            class="mb-2 h-32 w-auto sm:h-40 md:mb-0 md:h-48 lg:h-56"
+          />
+          <h1
+            class="text-2xl font-semibold tracking-wider text-primary-0 sm:text-3xl md:text-5xl lg:text-6xl"
+          >
+            Bytes<span class="text-primary-75">fest</span>
+            <span
+              class="bg-gradient-to-r from-primary-100 to-cyan-300 bg-clip-text text-transparent"
+              >2022</span
+            >
+          </h1>
+        </div>
+      </div>
+      <div
+        class="backdrop-bg fixed top-0 left-0 z-50 hidden h-full w-full backdrop-blur-lg transition-all duration-1000"
+      ></div>
+    </div>
+    <div
+      class="light-bg fixed z-[75] h-full w-full bg-white transition-all duration-500"
+    ></div>
+    <!-- LOAD ANIMATION END -->
+
+    <!-- HERO SECTION START -->
+
+    <!-- navigation-start -->
+    <nav class="navigation absolute left-0 h-20 w-full text-white sm:h-24">
+      <!-- container -->
+      <div
+        class="navigation-container mx-auto h-full px-5 lg:w-[1200px] lg:px-0"
+      >
+        <div class="w-ful flex h-full justify-between">
+          <div class="flex h-full items-center gap-x-1 lg:basis-3/12">
+            <img
+              src="/assets/img/logo-mini.png"
+              alt="bytesfest logo"
+              class="h-14 w-auto md:h-16"
+            />
+            <h1
+              class="text-sm font-semibold tracking-wider text-primary-0 sm:text-lg lg:text-xl"
+            >
+              Bytes<span class="text-primary-75">fest</span>
+              <span
+                class="bg-gradient-to-r from-primary-100 to-cyan-300 bg-clip-text text-transparent"
+                >2022</span
+              >
+            </h1>
+          </div>
+          <div
+            class="flex h-full items-center lg:static lg:w-auto lg:basis-5/12"
+          >
+            <!-- hamburger-menu -->
+            <button id="hamburger" class="relative z-40 p-2 lg:hidden">
+              <div
+                id="hamburger-menu"
+                class="m-auto flex h-6 w-6 flex-col justify-around md:h-7 md:w-7"
+              >
+                <span
+                  class="block h-[2px] w-full bg-white transition-all duration-300"
+                ></span>
+                <span
+                  class="block h-[2px] w-full bg-white transition-all duration-300"
+                ></span>
+                <span
+                  class="block h-[2px] w-full bg-white transition-all duration-300"
+                ></span>
+              </div>
+            </button>
+            <!-- menu -->
+            <div
+              id="navigation-menu"
+              class="absolute top-20 left-0 z-30 hidden w-full justify-center opacity-0 shadow-2xl transition duration-300 lg:static lg:block lg:h-full lg:w-full lg:opacity-100 lg:shadow-none"
+            >
+              <ul
+                class="flex h-64 w-10/12 flex-col items-center justify-evenly border-[.5px] border-neutral-300 bg-neutral-800 text-sm font-medium tracking-wider lg:h-full lg:flex-row lg:items-center lg:justify-around lg:border-none lg:bg-transparent lg:backdrop-blur-none"
+              >
+                <li class="">
+                  <a
+                    href="#home"
+                    class="decoration-primary-100 decoration-2 underline-offset-4 hover:underline"
+                    >Home</a
+                  >
+                </li>
+                <li class="group relative">
+                  <a
+                    href="#about"
+                    class="decoration-primary-100 decoration-2 underline-offset-4 hover:underline"
+                    >About</a
+                  ><span
+                    class="absolute top-8 left-0 z-30 hidden h-auto w-36 rounded-sm bg-primary-25 px-3 py-2 text-xs text-neutral-900 group-hover:block"
+                    >Mau tau apa itu bytesfest?</span
+                  >
+                </li>
+                <li class="group relative">
+                  <a
+                    href="#dangle"
+                    class="decoration-primary-100 decoration-2 underline-offset-4 hover:underline"
+                    >Dangle</a
+                  ><span
+                    class="absolute top-8 left-0 z-30 hidden h-auto w-44 rounded-sm bg-primary-25 px-3 py-2 text-xs text-neutral-900 group-hover:block"
+                    >Mascot kami tidak dibuat sembarangan lohh. Ada filosofi dan
+                    maknanya.</span
+                  >
+                </li>
+                <li class="group relative">
+                  <a
+                    href="#competition"
+                    class="decoration-primary-100 decoration-2 underline-offset-4 hover:underline"
+                    >Competition</a
+                  >
+                  <span
+                    class="absolute top-8 left-0 z-30 hidden h-auto w-36 rounded-sm bg-primary-25 px-3 py-2 text-xs text-neutral-900 group-hover:block"
+                    >Apa aja sih lombanya?</span
+                  >
+                </li>
+                <li class="group relative">
+                  <button
+                    onclick="submissionLomba()"
+                    class="decoration-primary-100 decoration-2 underline-offset-4 hover:underline"
+                  >
+                    Submission
+                  </button>
+                  <span
+                    class="absolute top-8 left-0 z-30 hidden h-auto w-36 rounded-sm bg-primary-25 px-3 py-2 text-xs text-neutral-900 group-hover:block"
+                    >Pengumpulan karya lomba disini!</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navigation-end -->
+
+    <div
+      class="h-[90vh] w-full bg-slate-900 bg-cover bg-left lg:h-[100vh]"
+      style="background-image: url('../assets/img/hero-img.png')"
+      id="home"
+    >
+      <!-- container -->
+      <div class="mx-auto h-full px-5 lg:w-[1200px] lg:px-0">
+        <div class="relative flex h-full w-full flex-col justify-center">
+          <div class="w-full text-center text-white">
+            <h3
+              class="text-shadow-hero-lg text-2xl font-semibold sm:text-3xl md:mb-1 md:text-4xl lg:mb-2 lg:text-5xl"
+            >
+              BUNCH OF YOUTH
+              <span
+                class="bg-gradient-to-r from-primary-100 to-cyan-300 bg-clip-text font-bold text-transparent"
+                >TECHNOTRACTION</span
+              >
+            </h3>
+            <h3
+              class="text-shadow-hero-lg mb-3 text-2xl font-semibold sm:text-3xl md:mb-6 md:text-4xl lg:text-5xl"
+            >
+              AND
+              <span
+                class="bg-gradient-to-r from-primary-100 to-cyan-300 bg-clip-text font-bold text-transparent"
+                >SPORT</span
+              >
+              FESTIVAL
+            </h3>
+            <p
+              class="text-shadow-hero-lg mb-5 text-base text-primary-25 sm:text-lg md:mb-9 md:text-lg lg:text-xl"
+            >
+              Aksi dan Kreasi Muda Indonesia
+            </p>
+            <!-- call-to-action  -->
+            <div class="flex w-full justify-center gap-3 md:gap-8">
+              <a
+                href="#competition"
+                class="group relative overflow-hidden rounded-sm bg-primary-0 px-10 py-3 font-semibold tracking-wide text-primary-900 transition-all duration-300 md:px-16 md:py-4"
+              >
+                <p
+                  class="transition-transform duration-300 group-hover:-translate-x-2 md:group-hover:group-hover:-translate-x-5"
+                >
+                  Daftar
+                </p>
+                <div
+                  class="absolute top-0 right-0 flex h-full w-8 translate-x-full items-center justify-center bg-primary-75 transition-all duration-300 group-hover:translate-x-0 md:w-12"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="bi bi-file-text w-5 md:w-6"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z"
+                    />
+                    <path
+                      d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <a
+                href="#about"
+                class="group flex items-center text-sm font-medium text-white md:text-base"
+              >
+                <p
+                  class="decoration-primary-100 decoration-2 underline-offset-4 group-hover:underline"
+                >
+                  Bytesfest itu apa?<span
+                    class="opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                    >??</span
+                  >
+                </p>
+              </a>
+            </div>
+          </div>
+
+          <!-- clock -->
+          <div
+            class="absolute -bottom-4 left-1/2 mx-auto h-20 w-full -translate-x-1/2 rounded-sm border-[0.5px] border-neutral-200 bg-neutral-900 px-5 opacity-75 sm:h-24 sm:w-[480px] md:w-[520px] lg:-bottom-5 lg:h-28 lg:w-[400px] lg:px-0"
+          >
+            <p
+              class="absolute left-0 w-full -translate-y-8 text-center text-xs tracking-wide text-white"
+            >
+              Puncak acara dimulai dalam :
+            </p>
+            <div
+              class="relative -mt-4 grid h-full w-full grid-cols-7 content-center px-2 text-2xl"
+            >
+              <span class="relative text-center"
+                ><p class="md:text-3xl" id="countDownDay">00</p>
+                <p
+                  class="absolute w-full text-center text-xs text-primary-25 md:text-sm"
+                >
+                  Hari
+                </p></span
+              >
+              <span class="text-center">:</span>
+              <span class="relative"
+                ><p class="text-center md:text-3xl" id="countDownHour">00</p>
+                <p
+                  class="absolute w-full text-center text-xs text-primary-25 md:text-sm"
+                >
+                  Jam
+                </p></span
+              >
+              <span class="text-center">:</span>
+              <span class="relative"
+                ><p class="text-center md:text-3xl" id="countDownMinute">00</p>
+                <p
+                  class="absolute w-full text-center text-xs text-primary-25 md:text-sm"
+                >
+                  Menit
+                </p></span
+              >
+              <span class="text-center">:</span>
+              <span class="relative"
+                ><p class="text-center md:text-3xl" id="countDownSecond">00</p>
+                <p
+                  class="absolute w-full text-center text-xs text-primary-25 md:text-sm"
+                >
+                  Detik
+                </p></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- HERO SECTION END -->
+
+    <!-- ABOUT SECTION START -->
+    <div id="about" class="bg-neutral-900 py-32">
+      <!-- container -->
+      <div class="mx-auto px-5 lg:w-[1200px] lg:px-0">
+        <div class="flex w-full flex-col lg:flex-row">
+          <div class="mb-8 flex justify-center lg:mb-0 lg:basis-5/12">
+            <!-- bytesfest-logo -->
+            <div
+              class="flex h-40 w-32 justify-center sm:h-52 sm:w-44 md:h-64 md:w-52 lg:h-96 lg:w-72"
+            >
+              <img
+                src="/assets/img/logo-main.png"
+                alt="bytesfest about"
+                class="object-contain"
+              />
+            </div>
+          </div>
+
+          <div class="lg:flex lg:basis-7/12 lg:items-center">
+            <!-- text-container -->
+            <div class="sm:px-10 md:px-16">
+              <h3
+                data-aos="fade-right"
+                class="mb-1 text-center text-xl font-semibold tracking-wide text-primary-0 sm:text-left sm:text-2xl md:text-3xl lg:text-4xl"
+              >
+                Bytes<span
+                  class="bg-gradient-to-r from-primary-100 to-cyan-300 bg-clip-text text-transparent"
+                  >fest</span
+                >
+              </h3>
+              <h5
+                data-aos="fade-right"
+                class="mb-3 text-center text-xs tracking-normal text-neutral-100 sm:text-left sm:text-sm md:mb-4 md:text-base"
+              >
+                Bunch of Youth Technottraction and Sport Festival
+              </h5>
+              <div
+                data-aos="fade-right"
+                data-aos-duration="300"
+                data-aos-delay="0"
+                class="mb-5 flex w-full justify-center sm:justify-start"
+              >
+                <div class="h-[3px] w-16 bg-primary-100"></div>
+              </div>
+              <div
+                data-aos="fade-right"
+                data-aos-easing="ease"
+                data-aos-delay="50"
+                class=""
+              >
+                <p
+                  class="mb-5 text-sm leading-relaxed text-neutral-50 md:leading-loose"
+                >
+                  Bytesfest merupakan event tahunan yang diselenggarakan oleh
+                  himpunan Mahasiswa Prodi Pendidikan Teknik Informatika dan
+                  Komputer Universitas Sebelas Maret. Bytesfest tahun 2022 yang
+                  mengusung tema Akrisma (“Aksi dan Kreasi Muda Indonesia”).
+                </p>
+                <p
+                  class="text-sm leading-relaxed text-neutral-50 md:leading-loose"
+                >
+                  Diharapkan dengan diselenggarakan acara ini dapat mengajak
+                  generasi muda mengembangkan potensi, minat bakat dan ajang
+                  kreatifitas yang mampu membentuk karakter yang berjiwa muda
+                  dan mampu mengembangkan potensi kreativitas dan inovasi
+                  melalui apapun yang mereka punya.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ABOUT SECTION END -->
+
+    <!-- DANGLE SECTION START -->
+    <div id="dangle" class="relative bg-primary-800 py-32">
+      <!-- container -->
+      <div class="mx-auto px-5 lg:w-[1200px] lg:px-0">
+        <div class="flex w-full flex-col lg:flex-row-reverse">
+          <div class="mb-8 flex justify-center lg:mb-0 lg:basis-5/12">
+            <!-- bytesfest-logo -->
+            <div
+              class="flex h-40 w-32 justify-center sm:h-52 sm:w-44 md:h-64 md:w-52 lg:h-96 lg:w-72"
+            >
+              <img
+                src="/assets/img/mascot-main.png"
+                alt="bytesfest about"
+                class="object-contain"
+              />
+            </div>
+          </div>
+
+          <div class="lg:flex lg:basis-7/12 lg:items-center">
+            <!-- text-container -->
+            <div class="sm:px-10 md:px-16">
+              <h3
+                data-aos="fade-right"
+                class="text-shadow-hero-lg mb-1 text-center text-xl font-semibold tracking-wide sm:text-left sm:text-2xl md:text-3xl lg:text-4xl"
+              >
+                <span
+                  class="bg-gradient-to-r from-primary-100 to-cyan-300 bg-clip-text font-bold text-transparent"
+                  >Dangle</span
+                >
+              </h3>
+              <h5
+                data-aos="fade-right"
+                class="text-shadow-hero-md mb-3 text-center text-xs tracking-normal text-neutral-100 sm:text-left sm:text-sm md:mb-4 md:text-base"
+              >
+                Filosofi Maskot
+              </h5>
+              <!-- underline-decoration -->
+              <div
+                data-aos="fade-right"
+                data-aos-duration="300"
+                class="mb-5 flex w-full justify-center sm:justify-start"
+              >
+                <div class="h-[3px] w-16 bg-primary-100"></div>
+              </div>
+              <div data-aos="fade-right" data-aos-delay="50" class="">
+                <p
+                  class="mb-5 text-sm leading-relaxed text-neutral-50 md:leading-loose"
+                >
+                  Mahkota Dangle melambangkan kejayaan dan kemakmuran dari acara
+                  Bytesfest yang rutin diadakan setiap tahunnya, kacamatanya
+                  membuat bytesfest terkesan modern karena mengikuti
+                  perkembangan peradaban yang serba modern tanpa meninggalkan
+                  keahlian yang ditempatkan dengan tepat.
+                </p>
+                <p
+                  class="text-sm leading-relaxed text-neutral-50 md:leading-loose"
+                >
+                  Baju saman Dangle memberi makna seni yang melekat dan
+                  melestarikan jiwa seni. Truntum mampu untuk tumbuh dan
+                  berkembang mengikuti perubahan seni dan teknologi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- connecting section line -->
+      <span
+        class="absolute -top-10 left-1/2 block h-20 w-[2px] animate-pulse bg-neutral-500"
+      ></span>
+      <!-- <span
+        class="absolute -bottom-10 left-1/2 block h-20 w-[2px] animate-pulse bg-neutral-500"
+      ></span> -->
+    </div>
+    <!-- DANGLE SECTION END -->
+
+
+	<!-- WEBINAR SECTION END -->
+    <div id="webinar" class="relative bg-primary-800 pt-10 pb-32 md:py-32">
+      <!-- container -->
+      <div class="mx-auto px-5 lg:w-[1200px] lg:px-0">
+        <div class="flex w-full flex-col lg:flex-row-reverse">
+
+          <div class="lg:flex lg:items-center text-center">
+            <!-- text-container -->
+            <div class="sm:px-10 md:px-16">
+              <h3
+                data-aos="fade-right"
+                class="text-shadow-hero-lg mb-1 text-center text-xl font-semibold tracking-wide sm:text-2xl md:text-3xl lg:text-5xl"
+              >
+                <span
+                  class="bg-gradient-to-r from-primary-100 to-cyan-300 bg-clip-text font-bold text-transparent"
+                  >Techminar</span
+                >
+              </h3>
+              <h5
+                data-aos="fade-right"
+                class="text-shadow-hero-md mb-3 text-center text-sm tracking-normal text-neutral-100 sm:text-sm md:mb-4 md:text-3xl"
+              >
+				Creativity and Innovation of Art in Technology
+              </h5>
+              <!-- underline-decoration -->
+              <div
+                data-aos="fade-right"
+                data-aos-duration="300"
+                class="mb-5 flex w-full justify-center"
+              >
+                <div class="h-[3px] w-1/3 bg-primary-100 my-4"></div>
+              </div>
+              <div data-aos="fade-right" data-aos-delay="50" class="">
+                <p
+                  class="mb-5 text-left md:!text-center md:text-xl text-xs leading-relaxed text-neutral-50 md:leading-loose lg:px-20"
+                >
+				Techminar merupakan puncak acara dari rangkaian BYTESFEST yang menjadi acara tahunan yang diadakan oleh HMP MIKROPTIK UNS.  "Creativity and Innovation of Art in Technology" merupakan tema Techminar pada tahun ini yang mengajak para peserta baik siswa, mahasiswa maupun masyarakat umum untuk menambah wawasan tentang teknologi khususnya penerapan teknologi di bidang seni.
+                </p>
+              </div>
+
+			  
+            </div>
+		</div>
+	</div>
+		<div class="text-center my-4 pt-4 flex w-full justify-center gap-10">
+			<button 
+				onclick="daftarWebinar()"
+				class="group relative box-border overflow-hidden rounded-sm bg-neutral-0 px-8 py-2 font-semibold text-primary-900 transition-all duration-300 md:px-10 md:py-3"
+			>
+				<p
+				class="relative z-30 transition-all duration-300 group-hover:text-white"
+				>
+				Register
+				</p>
+				<span
+				class="absolute top-0 left-0 block h-full w-0 bg-primary-200 shadow-[inset_0_0_0_1px_#fff] shadow-primary-0 transition-all duration-300 group-hover:w-full"
+				></span>
+			</button>
+			<button
+				onclick="moreInfoWebinar()"
+				class="group relative box-border overflow-hidden rounded-sm bg-neutral-0 px-8 py-2 font-semibold text-primary-900 transition-all duration-300 md:px-10 md:py-3"
+			>
+				<p
+				class="relative z-30 transition-all duration-300 group-hover:text-white"
+				>
+				More Info
+				</p>
+				<span
+				class="absolute top-0 left-0 block h-full w-0 bg-primary-200 shadow-[inset_0_0_0_1px_#fff] shadow-primary-0 transition-all duration-300 group-hover:w-full"
+				></span>
+			</button>
+		</div>
+      </div>
+      <!-- connecting section line -->
+      <!-- <span
+        class="absolute -top-10 left-1/2 block h-20 w-[2px] animate-pulse bg-neutral-500"
+      ></span> -->
+      <span
+        class="absolute -bottom-10 left-1/2 block h-20 w-[2px] animate-pulse bg-neutral-500"
+      ></span>
+    </div>
+	<!-- WEBINAR SECTION END -->
+
+    <!-- Slider main container -->
+    <div class="bg-neutral-900" id="competition">
+      <div class="pt-36 text-center">
+        <h1
+          data-aos="fade"
+          class="mb-3 text-center text-xl font-semibold tracking-wide text-primary-0 sm:text-2xl md:mb-4 md:text-3xl lg:text-4xl"
+        >
+          Bytes<span class="text-primary-75">fest</span> Competition
+          <span
+            class="bg-gradient-to-r from-primary-100 to-cyan-300 bg-clip-text text-transparent"
+            >2022</span
+          >
+        </h1>
+        <!-- underline-decoration -->
+        <div data-aos="fade" class="mb-6 flex w-full justify-center md:mb-8">
+          <div class="h-[3px] w-28 bg-primary-100"></div>
+        </div>
+        <p class="text-center text-xs text-neutral-100">
+          - GESER UNTUK INFO LOMBA LAINNYA -
+        </p>
+      </div>
+      <!-- swipper-js -->
+      <div class="swiper mt-8 mb-32">
+        <div class="swiper-wrapper pb-12">
+          <!-- slide-1 -->
+          <div data-aos="fade" class="swiper-slide swiper-slide-custom">
+            <div class="h-full w-full bg-neutral-800 lg:relative lg:h-[500px]">
+              <!-- img -->
+              <div
+                class="-lg:z-10 relative flex h-36 w-full items-center justify-center sm:h-52 lg:absolute lg:h-full"
+              >
+                <img
+                  src="/assets//img/lomba-podcast.png"
+                  alt=""
+                  class="h-full w-full object-cover"
+                />
+                <p
+                  data-aos="fade-right"
+                  class="absolute top-1/2 text-2xl font-medium tracking-wide md:text-3xl lg:top-16 lg:text-4xl"
+                >
+                  Podcast
+                </p>
+              </div>
+              <!-- text-content -->
+              <div
+                class="z-10 mt-4 mb-8 px-5 pb-20 md:mb-10 md:mt-5 md:px-10 lg:absolute lg:top-36 lg:flex lg:w-full lg:justify-center"
+              >
+                <p
+                  data-aos="fade-right"
+                  class="text-xs leading-relaxed text-neutral-50 md:leading-loose lg:w-[600px] lg:text-sm lg:leading-loose"
+                >
+                  Dengan Tema “How to improve yourself, with your creativity and
+                  what you have” Merupakan Kompetisi yang membutuhkan pemikiran
+                  yang mendalam dan kritis, kompetisi Podcast bisa diikuti oleh
+                  SMA sederajat dan mahasiswa aktif dari seluruh perguruan
+                  tinggi, podcast berdurasi minimal 5 menit dan maksimal 10
+                  menit dengan maksimal 3 orang per kelompok.
+                </p>
+              </div>
+              <!-- action-button -->
+              <div
+                class="absolute bottom-0 z-10 flex h-20 w-full items-center justify-center gap-10 bg-neutral-700 text-sm"
+              >
+                <button
+                  onclick="daftarLomba('podcast')"
+                  class="group relative box-border overflow-hidden rounded-sm bg-neutral-0 px-8 py-2 font-semibold text-primary-900 transition-all duration-300 md:px-10 md:py-3"
+                >
+                  <p
+                    class="relative z-30 transition-all duration-300 group-hover:text-white"
+                  >
+                    Daftar
+                  </p>
+                  <span
+                    class="absolute top-0 left-0 block h-full w-0 bg-primary-200 shadow-[inset_0_0_0_1px_#fff] shadow-primary-0 transition-all duration-300 group-hover:w-full"
+                  ></span>
+                </button>
+                <a
+                  href="https://drive.google.com/file/d/1qdkdb98OCPXUa7nyusX-IXvGUPAarwxT/view?usp=drivesdk"
+                  target="_blank"
+                  class="group decoration-primary-200 decoration-2 underline-offset-2 hover:underline"
+                  >Guidebook
+                  <span
+                    class="inline-block transition-transform duration-200 group-hover:translate-x-2"
+                    >></span
+                  ></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- slide-2 -->
+          <div data-aos="fade" class="swiper-slide swiper-slide-custom">
+            <div class="h-full w-full bg-neutral-800 lg:relative lg:h-[500px]">
+              <!-- img -->
+              <div
+                class="-lg:z-10 relative flex h-36 w-full items-center justify-center sm:h-52 lg:absolute lg:h-full"
+              >
+                <img
+                  src="/assets//img/lomba-web.png"
+                  alt=""
+                  class="h-full w-full object-cover"
+                />
+                <p
+                  data-aos="fade-right"
+                  class="absolute top-1/2 text-2xl font-medium tracking-wide md:text-3xl lg:top-16 lg:text-4xl"
+                >
+                  Desain Web
+                </p>
+              </div>
+              <!-- text-content -->
+              <div
+                class="z-10 mt-4 mb-8 px-5 pb-20 md:mb-10 md:mt-5 md:px-10 lg:absolute lg:top-36 lg:flex lg:w-full lg:justify-center"
+              >
+                <p
+                  data-aos="fade-right"
+                  class="text-xs leading-relaxed text-neutral-50 md:leading-loose lg:w-[600px] lg:text-sm lg:leading-loose"
+                >
+                  Merupakan Kompetisi perancangan tampilan sebuah web statis
+                  atau web yang informasi di dalamnya tidak dapat diubah kecuali
+                  jika diubah syntax-nya. Tema web yang diusung yaitu “fashion
+                  web” lomba ini diikuti oleh SMA sederajat dan mahasiswa yang
+                  berstatus aktif dari seluruh perguruan tinggi di Indonesia
+                  dengan jumlah maksimal 3 orang per kelompok.
+                </p>
+              </div>
+              <!-- action-button -->
+              <div
+                class="absolute bottom-0 z-10 flex h-20 w-full items-center justify-center gap-10 bg-neutral-700 text-sm"
+              >
+                <button
+                  onclick="daftarLomba('web')"
+                  class="group relative box-border overflow-hidden rounded-sm bg-neutral-0 px-8 py-2 font-semibold text-primary-900 transition-all duration-300 md:px-10 md:py-3"
+                >
+                  <p
+                    class="relative z-30 transition-all duration-300 group-hover:text-white"
+                  >
+                    Daftar
+                  </p>
+                  <span
+                    class="absolute top-0 left-0 block h-full w-0 bg-primary-200 shadow-[inset_0_0_0_1px_#fff] shadow-primary-0 transition-all duration-300 group-hover:w-full"
+                  ></span>
+                </button>
+                <a
+                  href="https://drive.google.com/file/d/1w3QTiM06jlFuy3kO5dtYod60bzbYSq1g/view?usp=sharing"
+                  target="_blank"
+                  class="group decoration-primary-200 decoration-2 underline-offset-2 hover:underline"
+                  >Guidebook
+                  <span
+                    class="inline-block transition-transform duration-200 group-hover:translate-x-2"
+                    >></span
+                  ></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- slide-3 -->
+          <div data-aos="fade" class="swiper-slide swiper-slide-custom">
+            <div class="h-full w-full bg-neutral-800 lg:relative lg:h-[500px]">
+              <!-- img -->
+              <div
+                class="-lg:z-10 relative flex h-36 w-full items-center justify-center sm:h-52 lg:absolute lg:h-full"
+              >
+                <img
+                  src="/assets//img/lomba-fotografi.png"
+                  alt=""
+                  class="h-full w-full object-cover"
+                />
+                <p
+                  data-aos="fade-right"
+                  class="absolute top-1/2 text-2xl font-medium tracking-wide md:text-3xl lg:top-16 lg:text-4xl"
+                >
+                  Fotografi
+                </p>
+              </div>
+              <!-- text-content -->
+              <div
+                class="z-10 mt-4 mb-8 px-5 pb-20 md:mb-10 md:mt-5 md:px-10 lg:absolute lg:top-36 lg:flex lg:w-full lg:justify-center"
+              >
+                <p
+                  data-aos="fade-right"
+                  class="text-xs leading-relaxed text-neutral-50 md:leading-loose lg:w-[600px] lg:text-sm lg:leading-loose"
+                >
+                  Merupakan kompetisi dalam menyajikan sebuah karya visual
+                  berbentuk foto yang bermakna khusus dan informatif. Kompetisi
+                  Fotografi bisa diikuti oleh SMA sederajat dan mahasiswa aktif
+                  dari seluruh perguruan tinggi ,yang bertemakan “Yang Muda Yang
+                  Berkarya” yang bertujuan agar para generasi muda yang akan
+                  menjadi penerus bangsa terekspos dan dapat tercurahkan dalam
+                  karya fotografi.
+                </p>
+              </div>
+              <!-- action-button -->
+              <div
+                class="absolute bottom-0 z-10 flex h-20 w-full items-center justify-center gap-10 bg-neutral-700 text-sm"
+              >
+                <button
+                  onclick="daftarLomba('fotografi')"
+                  class="group relative box-border overflow-hidden rounded-sm bg-neutral-0 px-8 py-2 font-semibold text-primary-900 transition-all duration-300 md:px-10 md:py-3"
+                >
+                  <p
+                    class="relative z-30 transition-all duration-300 group-hover:text-white"
+                  >
+                    Daftar
+                  </p>
+                  <span
+                    class="absolute top-0 left-0 block h-full w-0 bg-primary-200 shadow-[inset_0_0_0_1px_#fff] shadow-primary-0 transition-all duration-300 group-hover:w-full"
+                  ></span>
+                </button>
+                <a
+                  href="https://drive.google.com/file/d/1HFKYwh3GiVIAOCd-4eiqi_fjMBOfubjt/view?usp=sharing"
+                  target="_blank"
+                  class="group decoration-primary-200 decoration-2 underline-offset-2 hover:underline"
+                  >Guidebook
+                  <span
+                    class="inline-block transition-transform duration-200 group-hover:translate-x-2"
+                    >></span
+                  ></a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- slide-4 -->
+          <div data-aos="fade" class="swiper-slide swiper-slide-custom">
+            <div class="h-full w-full bg-neutral-800 lg:relative lg:h-[500px]">
+              <!-- img -->
+              <div
+                class="-lg:z-10 relative flex h-36 w-full items-center justify-center sm:h-52 lg:absolute lg:h-full"
+              >
+                <img
+                  src="/assets//img/lomba-essai.png"
+                  alt=""
+                  class="h-full w-full object-cover"
+                />
+                <p
+                  data-aos="fade-right"
+                  class="absolute top-1/2 text-2xl font-medium tracking-wide md:text-3xl lg:top-16 lg:text-4xl"
+                >
+                  Esai
+                </p>
+              </div>
+              <!-- text-content -->
+              <div
+                class="z-10 mt-4 mb-8 px-5 pb-20 md:mb-10 md:mt-5 md:px-10 lg:absolute lg:top-36 lg:flex lg:w-full lg:justify-center"
+              >
+                <p
+                  data-aos="fade-right"
+                  class="text-xs leading-relaxed text-neutral-50 md:leading-loose lg:w-[600px] lg:text-sm lg:leading-loose"
+                >
+                  Merupakan kompetisi di bidang kepenulisan yang dapat diikuti
+                  oleh SMA sederajat dan mahasiswa yang berstatus aktif dari
+                  seluruh perguruan tinggi di Indonesia. Tema yang diangkat
+                  adalah “Peran Generasi Muda dalam Pengembangan Teknologi Masa
+                  Depan Indonesia”. Lomba ini bertujuan sebagai wadah untuk
+                  mengembangkan kreativitas dan kemampuan berpikir kritis.
+                </p>
+              </div>
+              <!-- action-button -->
+              <div
+                class="absolute bottom-0 z-10 flex h-20 w-full items-center justify-center gap-10 bg-neutral-700 text-sm"
+              >
+                <button
+                  onclick="daftarLomba('essai')"
+                  class="group relative box-border overflow-hidden rounded-sm bg-neutral-0 px-8 py-2 font-semibold text-primary-900 transition-all duration-300 md:px-10 md:py-3"
+                >
+                  <p
+                    class="relative z-30 transition-all duration-300 group-hover:text-white"
+                  >
+                    Daftar
+                  </p>
+                  <span
+                    class="absolute top-0 left-0 block h-full w-0 bg-primary-200 shadow-[inset_0_0_0_1px_#fff] shadow-primary-0 transition-all duration-300 group-hover:w-full"
+                  ></span>
+                </button>
+                <a
+                  href="https://drive.google.com/file/d/1lPkKHZqVfzljS4QvMye2OKc1EE7vrvc_/view?usp=sharing"
+                  target="_blank"
+                  class="group decoration-primary-200 decoration-2 underline-offset-2 hover:underline"
+                  >Guidebook
+                  <span
+                    class="inline-block transition-transform duration-200 group-hover:translate-x-2"
+                    >></span
+                  ></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- slide-5 -->
+          <div data-aos="fade" class="swiper-slide swiper-slide-custom">
+            <div class="h-full w-full bg-neutral-800 lg:relative lg:h-[500px]">
+              <!-- img -->
+              <div
+                class="-lg:z-10 relative flex h-36 w-full items-center justify-center sm:h-52 lg:absolute lg:h-full"
+              >
+                <img
+                  src="/assets//img/lomba-poster.png"
+                  alt=""
+                  class="h-full w-full object-cover"
+                />
+                <p
+                  data-aos="fade-right"
+                  class="absolute top-1/2 text-2xl font-medium tracking-wide md:text-3xl lg:top-16 lg:text-4xl"
+                >
+                  Poster
+                </p>
+              </div>
+              <!-- text-content -->
+              <div
+                class="z-10 mt-4 mb-8 px-5 pb-20 md:mb-10 md:mt-5 md:px-10 lg:absolute lg:top-36 lg:flex lg:w-full lg:justify-center"
+              >
+                <p
+                  data-aos="fade-right"
+                  class="text-xs leading-relaxed text-neutral-50 md:leading-loose lg:w-[600px] lg:text-sm lg:leading-loose"
+                >
+                  Merupakan kompetisi yang menyediakan karya visual yang
+                  berwarna-warni, yang memudahkan untuk menyuarakan masalah yang
+                  terkait dan sesuai untuk ditampilkan di tempat umum. Kompetisi Poster bisa diikuti
+                  oleh SMA sederajat dan mahasiswa aktif dari seluruh perguruan
+                  tinggi dengan mengusung tema "Great Creation Start With
+                  Yourself".
+                </p>
+              </div>
+              <!-- action-button -->
+              <div
+                class="absolute bottom-0 z-10 flex h-20 w-full items-center justify-center gap-10 bg-neutral-700 text-sm"
+              >
+                <button
+                  onclick="daftarLomba('poster')"
+                  class="group relative box-border overflow-hidden rounded-sm bg-neutral-0 px-8 py-2 font-semibold text-primary-900 transition-all duration-300 md:px-10 md:py-3"
+                >
+                  <p
+                    class="relative z-30 transition-all duration-300 group-hover:text-white"
+                  >
+                    Daftar
+                  </p>
+                  <span
+                    class="absolute top-0 left-0 block h-full w-0 bg-primary-200 shadow-[inset_0_0_0_1px_#fff] shadow-primary-0 transition-all duration-300 group-hover:w-full"
+                  ></span>
+                </button>
+                <a
+                  href="https://drive.google.com/file/d/10v2iYVQ_GSod0XAIwc5dv3_1_57V4FKO/view?usp=sharing"
+                  target="_blank"
+                  class="group decoration-primary-200 decoration-2 underline-offset-2 hover:underline"
+                  >Guidebook
+                  <span
+                    class="inline-block transition-transform duration-200 group-hover:translate-x-2"
+                    >></span
+                  ></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="!flex !justify-evenly md:!justify-center md:gap-24">
+          <div
+            class="swiper-button-prev !relative -translate-y-1/4 rounded-full bg-primary-400 p-5 uppercase !text-white hover:bg-primary-500 hover:shadow-lg"
+          ></div>
+          <div class="swiper-pagination !relative !w-auto"></div>
+          <div
+            class="swiper-button-next !relative -translate-y-1/4 rounded-full bg-primary-400 p-5 uppercase !text-white hover:bg-primary-500 hover:shadow-lg"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="mx-auto h-full w-full bg-[#1b1b1b] py-32">
+      <div class="text-center">
+        <h1
+          data-aos="fade"
+          href=""
+          class="mb-3 text-center text-xl font-semibold tracking-wide text-primary-0 sm:text-2xl md:mb-4 md:text-3xl lg:text-4xl"
+        >
+          Timeline Bytes<span class="text-primary-75">fest</span>
+          <span
+            class="bg-gradient-to-r from-primary-100 to-cyan-300 bg-clip-text text-transparent"
+            >2022</span
+          >
+        </h1>
+        <!-- underline-decoration -->
+        <div data-aos="fade" class="mb-6 flex w-full justify-center md:mb-16">
+          <div class="h-[3px] w-28 bg-primary-100"></div>
+        </div>
+      </div>
+      <!-- timeline-content -->
+      <div class="wrap relative h-full overflow-hidden px-5">
+        <!-- line -->
+        <div
+          class="border-2-2 absolute h-full border-l-[2px] border-neutral-0 border-opacity-100 lg:h-full"
+          style="left: 50%"
+        ></div>
+        <!-- right timeline -->
+        <div
+          class="right-timeline mb-8 flex w-full items-center justify-between md:mb-16"
+        >
+          <!-- right -->
+          <div
+            class="order-1 flex w-5/12 justify-end"
+            data-aos="fade-left"
+            data-aos-delay="500"
+          >
+            <h3
+              class="border-l-4 border-primary-300 bg-primary-50 px-2 py-2 text-xs font-normal text-neutral-900 md:px-3 md:py-3 md:text-sm"
+            >
+              <b>28</b> September - <b>8</b> Oktober 2022
+            </h3>
+          </div>
+          <!-- left -->
+          <div
+            data-aos="fade"
+            class="z-20 order-1 flex h-5 w-5 items-center rounded-full bg-primary-50"
+          ></div>
+          <div
+            data-aos="fade"
+            data-aos-delay="300"
+            class="order-1 flex w-5/12 justify-start"
+          >
+            <h3 class="text-sm font-normal text-white md:text-base">
+              Registrasi Lomba <span class="text-neutral-75">(Batch 1)</span>
+            </h3>
+          </div>
+        </div>
+
+        <!-- right timeline -->
+        <div
+          class="right-timeline mb-8 flex w-full items-center justify-between md:mb-16"
+        >
+          <!-- right -->
+          <div
+            data-aos="fade-left"
+            data-aos-delay="500"
+            class="order-1 flex w-5/12 justify-end"
+          >
+            <h3
+              class="border-l-4 border-primary-300 bg-primary-50 px-2 py-2 text-xs font-normal text-neutral-900 md:px-3 md:py-3 md:text-sm"
+            >
+              <b>9</b> Oktober - <b>13</b> Oktober 2022
+            </h3>
+          </div>
+          <!-- left -->
+          <div
+            data-aos="fade"
+            class="z-20 order-1 flex h-5 w-5 items-center rounded-full bg-primary-75"
+          ></div>
+          <div
+            data-aos="fade"
+            data-aos-delay="300"
+            class="order-1 flex w-5/12 justify-start"
+          >
+            <h3 class="text-sm font-normal text-white md:text-base">
+              Pengumpulan Karya <span class="text-neutral-75">(Batch 1)</span>
+            </h3>
+          </div>
+        </div>
+
+        <!-- right timeline -->
+        <div
+          class="right-timeline mb-8 flex w-full items-center justify-between md:mb-16"
+        >
+          <!-- right -->
+          <div
+            data-aos="fade-left"
+            data-aos-delay="500"
+            class="order-1 flex w-5/12 justify-end"
+          >
+            <h3
+              class="border-l-4 border-primary-300 bg-primary-50 px-2 py-2 text-xs font-normal text-neutral-900 md:px-3 md:py-3 md:text-sm"
+            >
+              <b>9</b> Oktober - <b>22</b> Oktober 2022
+            </h3>
+          </div>
+          <!-- left -->
+          <div
+            data-aos="fade"
+            class="z-20 order-1 flex h-5 w-5 items-center rounded-full bg-primary-100"
+          ></div>
+          <div
+            data-aos="fade"
+            data-aos-delay="300"
+            class="order-1 flex w-5/12 justify-start"
+          >
+            <h3 class="text-sm font-normal text-white md:text-base">
+              Registrasi Lomba <span class="text-neutral-75">(Batch 2)</span>
+            </h3>
+          </div>
+        </div>
+
+        <div
+          class="right-timeline mb-8 flex w-full items-center justify-between md:mb-16"
+        >
+          <!-- right -->
+          <div
+            data-aos="fade"
+            data-aos-delay="300"
+            class="order-1 flex w-5/12 justify-end"
+          >
+            <h3 class="text-sm font-normal text-white md:text-base">
+              Pengumpulan Karya <span class="text-neutral-75">(Batch 2)</span>
+            </h3>
+          </div>
+          <!-- left -->
+          <div
+            data-aos="fade"
+            class="z-20 order-1 flex h-5 w-5 items-center rounded-full bg-primary-200"
+          ></div>
+          <div
+            data-aos="fade-right"
+            data-aos-delay="500"
+            class="order-1 flex w-5/12 justify-start"
+          >
+            <h3
+              class="border-l-4 border-primary-400 bg-primary-75 px-2 py-2 text-xs font-normal text-neutral-900 md:px-3 md:py-3 md:text-sm"
+            >
+              <b>23</b> Oktober - <b>27</b> Oktober 2022
+            </h3>
+          </div>
+        </div>
+
+        <div
+          class="right-timeline mb-8 flex w-full items-center justify-between md:mb-16"
+        >
+          <!-- right -->
+          <div
+            data-aos="fade"
+            data-aos-delay="300"
+            class="order-1 flex w-5/12 justify-end"
+          >
+            <h3 class="text-sm font-normal text-white md:text-base">
+              Open Registrasi Seminar
+            </h3>
+          </div>
+          <!-- left -->
+          <div
+            data-aos="fade"
+            class="z-20 order-1 flex h-5 w-5 items-center rounded-full bg-primary-300"
+          ></div>
+          <div
+            data-aos="fade-right"
+            data-aos-delay="500"
+            class="order-1 flex w-5/12 justify-start"
+          >
+            <h3
+              class="border-l-4 border-primary-400 bg-primary-75 px-2 py-2 text-xs font-normal text-neutral-900 md:px-3 md:py-3 md:text-sm"
+            >
+              <b>28</b> Oktober - <b>11</b> November 2022
+            </h3>
+          </div>
+        </div>
+
+        <div
+          class="right-timeline md:mb162 mb-8 flex w-full items-center justify-between"
+        >
+          <!-- right -->
+          <div
+            data-aos="fade"
+            data-aos-delay="300"
+            class="order-1 flex w-5/12 justify-end"
+          >
+            <h3 class="text-sm font-normal text-white md:text-base">
+              Seminar, Awarding, & Puncak Acara
+            </h3>
+          </div>
+          <!-- left -->
+          <div
+            data-aos="fade"
+            class="z-20 order-1 flex h-5 w-5 items-center rounded-full bg-primary-400"
+          ></div>
+          <div
+            data-aos="fade-right"
+            data-aos-delay="500"
+            class="order-1 flex w-5/12 justify-start"
+          >
+            <h3
+              class="border-l-4 border-primary-400 bg-primary-75 px-2 py-2 text-xs font-normal text-neutral-900 md:py-3 md:px-3 md:text-sm"
+            >
+              <b>12</b> November 2022
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-footer">
+      <div class="container mx-auto w-full">
+        <div
+          class="grid w-full grid-flow-col grid-cols-1 grid-rows-3 lg:grid-cols-12 lg:grid-rows-1 lg:gap-4"
+        >
+          <div class="my-6 mt-4 lg:col-span-3 lg:my-0">
+            <img
+              class="mx-auto h-40 max-w-full object-cover lg:h-64"
+              src="../assets/img/dangle-footer.svg"
+            />
+          </div>
+          <div class="mt-4 text-center lg:col-span-6 lg:mt-16">
+            <div class="flex-col">
+              <div class="mb-5 text-2xl lg:text-3xl">
+                <h1
+                  class="text-shadow-hero-md font-semibold tracking-wider text-primary-0"
+                >
+                  Bytes<span class="text-primary-75">fest</span>
+                  <span
+                    class="bg-gradient-to-r from-primary-100 to-cyan-300 bg-clip-text text-transparent"
+                    >2022</span
+                  >
+                </h1>
+              </div>
+              <div class="mb-5 text-primary-25">
+                <span> Bunch of Youth Technottraction and Sport Festival </span>
+              </div>
+              <div class="mb-5 text-xs text-primary-50 md:text-sm">
+                <span> © Copyright 2022 - Bytesfest 2022 </span>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-3 lg:mt-16 lg:text-center">
+            <div class="flex-col items-center text-center lg:text-center">
+              <div class="text-md mt-2 font-light">
+                <h2 class="mb-5 text-base md:text-lg">Contact Person</h2>
+              </div>
+              <div class="flex justify-center gap-6">
+                <a
+                  href="mailto:bytesfestmikroptik@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100"
+                >
+                  <img
+                    class="h-7 w-7"
+                    src="/assets/img/icon-mailbox.png"
+                    alt=""
+                  />
+                </a>
+                <a
+                  href="https://www.instagram.com/bytesfest"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100"
+                >
+                  <img
+                    class="h-7 w-7"
+                    src="/assets/img/icon-instagram.png"
+                    alt=""
+                  />
+                </a>
+                <a
+                  href="https://www.tiktok.com/@bytesfest"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100"
+                >
+                  <img
+                    class="h-7 w-7"
+                    src="/assets/img/icon-tik-tok.png"
+                    alt=""
+                  />
+                </a>
+                <a
+                  href="https://wa.me/6285711666888"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100"
+                >
+                  <img
+                    class="h-7 w-7"
+                    src="/assets/img/icon-whatsapp.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- to-top-floating-button -->
+    <button
+      type="button"
+      data-mdb-ripple="true"
+      data-mdb-ripple-color="light"
+      class="bottom-8 right-8 z-30 inline-block animate-bounce rounded-full bg-primary-400 p-4 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-300 ease-in-out hover:bg-primary-500 hover:shadow-lg focus:bg-primary-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg"
+      id="btn-back-to-top"
+    >
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fas"
+        class="h-4 w-4"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"
+      >
+        <path
+          fill="currentColor"
+          d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+        ></path>
+      </svg>
+    </button>
+
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <!-- modal -->
+    <!-- wrap -->
+    <div
+      class="relative z-50 hidden opacity-0 transition duration-300"
+      aria-labelledby="modal-title"
+      role="dialog"
+      aria-modal="true"
+      id="modal-submission"
+    >
+      <div class="fixed inset-0 z-10 overflow-y-auto shadow-2xl">
+        <!-- backdrop -->
+        <div
+          class="fixed inset-0 z-20 bg-neutral-700 bg-opacity-75 backdrop-blur-sm transition-opacity duration-700"
+          id="backdrop-submission"
+        ></div>
+        <!-- modal-box -->
+        <div
+          class="absolute left-1/2 top-1/2 z-40 w-96 -translate-x-1/2 -translate-y-1/2 p-4 text-center sm:items-center sm:p-0"
+        >
+          <div
+            class="relative transform rounded-md border bg-primary-0 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl"
+          >
+            <!-- close-button -->
+            <button
+              id="close-button-submission"
+              class="group absolute right-2 top-2 z-50 text-neutral-400"
+            >
+              <img
+                src="/assets/img/icons/icons8-close-24.png"
+                alt=""
+                class="h-6 w-6 opacity-80 group-hover:opacity-50"
+              />
+            </button>
+            <div class="relative z-0 h-32 w-full">
+              <img
+                src="/assets/img/mascot-main.png"
+                class="absolute left-1/2 bottom-0 h-auto w-32 -translate-x-1/2"
+              />
+            </div>
+            <div class="relative z-50 rounded-md bg-primary-0">
+              <div class="relative">
+                <div style="text-align-last: center">
+                  <div class="mt-4 text-center">
+                    <h1
+                      class="z-[60] text-3xl font-semibold text-neutral-500"
+                      id="modal-title"
+                    >
+                      Gaskeun!!
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-5 mt-2">
+                <p class="px-5 text-center text-sm text-neutral-500">
+                  Yuk segera kumpulkan submission kamu!
+                </p>
+              </div>
+              <div
+                class="flex h-36 w-full flex-col justify-center gap-3 bg-primary-25 px-5 text-center text-sm"
+              >
+                <a
+                  id="btnSubmissionBatch1"
+                  target="_blank"
+                  class="inline-block rounded-sm bg-neutral-600 px-6 py-3 text-neutral-0 shadow-lg"
+                >
+                  Submission Batch 1
+                </a>
+                <a
+                  id="btnSubmissionBatch2"
+                  target="_blank"
+                  class="inline-block border-neutral-300 bg-primary-0 py-3 font-medium text-neutral-600 shadow-lg"
+                >
+                  Submission Batch 2
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative z-50 hidden opacity-0 transition duration-300"
+      aria-labelledby="modal-title"
+      role="dialog"
+      aria-modal="true"
+      id="modal-registrasi-webinar"
+    >
+      <div class="fixed inset-0 z-10 overflow-y-auto shadow-2xl">
+        <!-- backdrop -->
+        <div
+          class="fixed inset-0 z-20 bg-neutral-700 bg-opacity-75 backdrop-blur-sm transition-opacity duration-700"
+          id="backdrop-registrasi-webinar"
+        ></div>
+        <!-- modal-box -->
+        <div
+          class="absolute left-1/2 top-1/2 z-40 w-96 -translate-x-1/2 -translate-y-1/2 p-4 text-center sm:items-center sm:p-0"
+        >
+          <div
+            class="relative transform rounded-md border bg-primary-0 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl"
+          >
+            <!-- close-button -->
+            <button
+              id="close-button-registrasi-webinar"
+              class="group absolute right-2 top-2 z-50 text-neutral-400"
+            >
+              <img
+                src="/assets/img/icons/icons8-close-24.png"
+                alt=""
+                class="h-6 w-6 opacity-80 group-hover:opacity-50"
+              />
+            </button>
+            <div class="relative z-0 h-32 w-full">
+              <img
+                src="/assets/img/mascot-main.png"
+                class="absolute left-1/2 bottom-0 h-auto w-32 -translate-x-1/2"
+              />
+            </div>
+            <div class="relative z-50 rounded-md bg-primary-0">
+              <div class="relative">
+                <div style="text-align-last: center">
+                  <div class="mt-4 text-center">
+                    <h1
+                      class="z-[60] text-3xl font-semibold text-neutral-500"
+                      id="modal-title"
+                    >
+                      Gaskeun!!
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-5 mt-2">
+                <p class="px-5 text-center text-sm text-neutral-500">
+                  Jangan lupa cek email kalian setelah proses registrasi selesai ya!
+                </p>
+              </div>
+              <div
+                class="flex h-20 w-full flex-col justify-center gap-3 bg-primary-25 px-5 text-center text-sm"
+              >
+                <a
+			  	  href="https://s.id/Techminar"
+                  target="_blank"
+                  class="inline-block rounded-sm bg-neutral-600 px-6 py-3 text-neutral-0 shadow-lg"
+                >
+                  Registrasi
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative z-50 hidden opacity-0 transition duration-300"
+      aria-labelledby="modal-title"
+      role="dialog"
+      aria-modal="true"
+      id="modal-daftar"
+    >
+      <div class="fixed inset-0 z-10 overflow-y-auto shadow-2xl">
+        <!-- backdrop -->
+        <div
+          class="fixed inset-0 z-20 bg-neutral-700 bg-opacity-75 backdrop-blur-sm transition-opacity duration-700"
+          id="backdrop"
+        ></div>
+        <!-- modal-box -->
+        <div
+          class="absolute left-1/2 top-1/2 z-40 w-96 -translate-x-1/2 -translate-y-1/2 p-4 text-center sm:items-center sm:p-0"
+        >
+          <div
+            class="relative transform rounded-md border bg-primary-0 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl"
+          >
+            <!-- close-button -->
+            <button
+              id="close-button"
+              class="group absolute right-2 top-2 z-50 text-neutral-400"
+            >
+              <img
+                src="/assets/img/icons/icons8-close-24.png"
+                alt=""
+                class="h-6 w-6 opacity-80 group-hover:opacity-50"
+              />
+            </button>
+            <div class="relative z-0 h-32 w-full">
+              <img
+                src="/assets/img/mascot-main.png"
+                class="absolute left-1/2 bottom-0 h-auto w-32 -translate-x-1/2"
+              />
+            </div>
+            <div class="relative z-50 rounded-md bg-primary-0">
+              <div class="relative">
+                <div style="text-align-last: center">
+                  <div class="mt-4 text-center">
+                    <h1
+                      class="z-[60] text-3xl font-semibold text-neutral-500"
+                      id="modal-title"
+                    >
+                      Gaskeun!!
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-5 mt-2">
+                <p class="px-5 text-center text-sm text-neutral-500">
+                  Yuk segera registrasi dan konfirmasi pembayaran kamu!
+                </p>
+              </div>
+              <div
+                class="flex h-36 w-full flex-col justify-center gap-3 bg-primary-25 px-5 text-center text-sm"
+              >
+                <a
+                  id="btnRegistrasi"
+                  target="_blank"
+                  class="inline-block rounded-sm bg-neutral-600 px-6 py-3 text-neutral-0 shadow-lg"
+                >
+                  Registrasi >
+                </a>
+                <a
+                  id="btnKonfirmasi"
+                  target="_blank"
+                  class="inline-block border-neutral-300 bg-primary-0 py-3 font-medium text-neutral-600 shadow-lg"
+                >
+                  Konfirmasi Pembayaran
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative z-50 hidden opacity-0 transition duration-300"
+      aria-labelledby="modal-title"
+      role="dialog"
+      aria-modal="true"
+      id="modal-webinar"
+    >
+      <div class="fixed inset-0 z-10 overflow-y-auto shadow-2xl">
+        <!-- backdrop -->
+        <div
+          class="fixed inset-0 z-20 bg-neutral-700 bg-opacity-75 backdrop-blur-sm transition-opacity duration-700"
+          id="backdrop-webinar"
+        ></div>
+        <!-- modal-box -->
+        <div
+          class="absolute left-1/2 top-1/2 z-40 w-96 -translate-x-1/2 -translate-y-1/2 p-4 text-center sm:items-center sm:p-0"
+        >
+			<img src="../assets/img/pamflet.png" alt="Webinar Bytesfest 2022">
+      </div>
+    </div>
+
+    <!-- script -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        mirror: false,
+        once: true,
+        duration: 500,
+      });
+    </script>
+  </body>
+</html>
