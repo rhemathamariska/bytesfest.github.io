@@ -13,24 +13,24 @@ const countDownSecond = document.getElementById("countDownSecond");
 
 const linkLomba = {
   web: {
-    registrasi: "#",
-    konfirmasi:
-      "#",
+    registrasi: "https://forms.gle/mXDtikfPPSaTTQKS9",
+    konfirmasi: "https://forms.gle/ibHMWcm9XSgDsAhf7",
+	guidebook: "https://drive.google.com/file/d/167L6pIdylPou4ihDylkzUQHUiOcQoatg/view?usp=sharing"
   },
   poster: {
-    registrasi: "#",
-    konfirmasi:
-      "#",
+    registrasi: "https://forms.gle/UTt81HTa93JUCtQBA",
+    konfirmasi: "https://forms.gle/rx13jWc9JvrZ6nXC6",
+	guidebook: "#"
   },
   ml: {
-    registrasi: "#",
-    konfirmasi:
-      "#",
+    registrasi: "https://forms.gle/oX1z1XyFAQmKGPNM6",
+    konfirmasi: "https://forms.gle/Ce5HHE9mqiykciGj6",
+	guidebook: "https://drive.google.com/file/d/1MX41Hsd6AXdK8tuxxBFovbTaRvLxGMlt/view?usp=sharing"
   },
   futsal: {
-    registrasi: "#",
-    konfirmasi:
-      "#",
+    registrasi: "https://forms.gle/FTVQCFXPBQKQU2FF8",
+    konfirmasi: "https://forms.gle/v9FzMJGVJ3u777n99",
+	guidebook: "#"
   },
   
 };
@@ -212,6 +212,15 @@ function moreInfoWebinar() {
 	  modalWebinar.classList.toggle("opacity-100");
 	}, 100);
   }
+
+function goToGuidebook(lomba) {
+	event.preventDefault();
+	const link = linkLomba[lomba]['guidebook']
+	if(link != "#") {
+		window.open(link, "_blank");
+	}
+	
+}
 
 function daftarLomba(lomba) {
   event.preventDefault();
