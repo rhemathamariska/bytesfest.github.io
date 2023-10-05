@@ -121,7 +121,7 @@ hamburgerMenu.addEventListener("click", function () {
   }, 100);
 });
 
-const countDownDate = new Date("Sep 22, 2023 00:00:00").getTime();
+const countDownDate = new Date("Nov 26, 2023 00:00:00").getTime();
 const x = setInterval(function () {
   const now = new Date().getTime();
   const distance = countDownDate - now;
