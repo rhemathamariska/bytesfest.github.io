@@ -15,12 +15,12 @@ const linkLomba = {
   web: {
     registrasi: "https://forms.gle/mXDtikfPPSaTTQKS9",
     konfirmasi: "https://forms.gle/ibHMWcm9XSgDsAhf7",
-	guidebook: "https://drive.google.com/file/d/167L6pIdylPou4ihDylkzUQHUiOcQoatg/view?usp=sharing"
+	guidebook: "http://uns.id/GuideBookDesignWebBytesfest"
   },
   poster: {
     registrasi: "https://forms.gle/UTt81HTa93JUCtQBA",
     konfirmasi: "https://forms.gle/rx13jWc9JvrZ6nXC6",
-	guidebook: "#"
+	guidebook: "http://uns.id/GuideBookPosterBytesfest"
   },
   ml: {
     registrasi: "https://forms.gle/oX1z1XyFAQmKGPNM6",
