@@ -15,17 +15,17 @@ const linkLomba = {
   web: {
     registrasi: "https://forms.gle/mXDtikfPPSaTTQKS9",
     konfirmasi: "https://forms.gle/ibHMWcm9XSgDsAhf7",
-	guidebook: "http://uns.id/GuideBookDesignWebBytesfest"
+	guidebook: "uns.id/GuideBookDesainWebBytesfest"
   },
   poster: {
     registrasi: "https://forms.gle/UTt81HTa93JUCtQBA",
     konfirmasi: "https://forms.gle/rx13jWc9JvrZ6nXC6",
-	guidebook: "http://uns.id/GuideBookPosterBytesfest"
+	guidebook: "uns.id/GuideBookLombaPosterBytesfest"
   },
   ml: {
     registrasi: "https://forms.gle/oX1z1XyFAQmKGPNM6",
     konfirmasi: "https://forms.gle/Ce5HHE9mqiykciGj6",
-	guidebook: "https://drive.google.com/file/d/1MX41Hsd6AXdK8tuxxBFovbTaRvLxGMlt/view?usp=sharing"
+	guidebook: "#"
   },
   futsal: {
     registrasi: "https://forms.gle/FTVQCFXPBQKQU2FF8",
