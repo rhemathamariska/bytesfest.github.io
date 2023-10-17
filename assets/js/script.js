@@ -15,7 +15,7 @@ const linkLomba = {
   web: {
     registrasi: "https://forms.gle/mXDtikfPPSaTTQKS9",
     konfirmasi: "https://forms.gle/ibHMWcm9XSgDsAhf7",
-	guidebook: "https://uns.id/GuideBookDesainWebBytesfest"
+	guidebook: "uns.id/GuideBookDesainWebBytesfest"
   },
   poster: {
     registrasi: "https://forms.gle/UTt81HTa93JUCtQBA",
