@@ -13,12 +13,12 @@ const countDownSecond = document.getElementById("countDownSecond");
 
 const linkLomba = {
   web: {
-    registrasi: "https://forms.gle/mXDtikfPPSaTTQKS9",
+    registrasi: "https://forms.gle/5DUf6h3dBuncuJbr8",
     konfirmasi: "https://forms.gle/ibHMWcm9XSgDsAhf7",
 	guidebook: "https://uns.id/GuideBookDesainWebBytesfest"
   },
   poster: {
-    registrasi: "https://forms.gle/UTt81HTa93JUCtQBA",
+    registrasi: "https://forms.gle/nB9mUa6FV7LeJfU67",
     konfirmasi: "https://forms.gle/rx13jWc9JvrZ6nXC6",
 	guidebook: "https://uns.id/GuideBookLombaPosterBytesfest"
   },
