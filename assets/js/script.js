@@ -14,17 +14,17 @@ const countDownSecond = document.getElementById("countDownSecond");
 const linkLomba = {
   web: {
     registrasi: "https://forms.gle/xPq1q1X5zUoyuKQp8",
-    konfirmasi: "https://forms.gle/ibHMWcm9XSgDsAhf7",
+    konfirmasi: "https://forms.gle/SShryNVe6SggGwFQ7",
 	guidebook: "https://drive.google.com/file/d/1fuOgxin3eg9kQlCfo5q6xoW7EUtWYbCX/view?usp=drive_link"
   },
   poster: {
     registrasi: "https://forms.gle/17rZG6V1YNbUYFtD9",
-    konfirmasi: "https://forms.gle/rx13jWc9JvrZ6nXC6",
+    konfirmasi: "https://forms.gle/ktLMiHBYs1CaUGqX6",
 	guidebook: "https://drive.google.com/file/d/1sbxfU0q0l_7VS5RZVn1TviBJSXx_pEjV/view?usp=drive_link"
   },
   ml: {
-    registrasi: "https://forms.gle/oX1z1XyFAQmKGPNM6",
-    konfirmasi: "https://forms.gle/Ce5HHE9mqiykciGj6",
+    registrasi: "https://forms.gle/qT1afNhAqnyHugbw5",
+    konfirmasi: "https://forms.gle/Fi1LbkpQEpjz3KDP6",
 	guidebook: "https://uns.id/GuideBookLombaMobileLegends"
   },
   futsal: {
