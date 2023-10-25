@@ -36,8 +36,8 @@ const linkLomba = {
 };
 
 const linkSubmission = {
-  batch1: "#",
-  batch2: "#",
+  batch1: "https://forms.gle/Jyhp1wpWsFUDkY1BA",
+  batch2: "https://forms.gle/jEa6PDS6P5xPXywJ8",
 };
 
 window.onscroll = function () {
